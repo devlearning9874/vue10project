@@ -1,14 +1,16 @@
-import {createRouter, createWebHashHistory} from "vue-router"
-import DcHeroes from "./components/DcHeroes"
-import Calendar from "./components/Calendar"
+import {createRouter, createWebHistory} from "vue-router"
+import DcHeroes from "./pages/DcHeroes"
+import Calendar from "./pages/Calendar"
+import Home from "./pages/Home"
 
 const routes = [
+    {path:'/',component:Home},
     {path:'/dc-heroes',component:DcHeroes},
     {path:'/calendar', component:Calendar},
 ]
 
 const router = createRouter({
-    history:createWebHashHistory(),
+    history:createWebHistory(),
     routes,
 })
 
